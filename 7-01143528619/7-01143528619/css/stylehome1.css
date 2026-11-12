@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body{
+    font-family: "Cairo", sans-serif;
+}
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* 🔵 خلفية */
+body {
+    background: linear-gradient(to bottom, #0f172a, #1e3a8a);
+    color: white;
+}
+
+/* 🔵 نافبار */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 🔵 الهيدر */
+header {
+    text-align: center;
+    margin-top: 60px;
+}
+
+header h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* ✨ المسافة الي عاوزهاا */
+.desc {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* 🔵 زرار */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #06b6d4;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.btn:hover {
+    background: #0891b2;
+    transform: translateY(-5px);
+}
+
+/* 🔵 الكروت */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 40px;
+  direction: rtl;
+  text-align: center;
+
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 15px;
+    width: 300px;
+        opacity: 1;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 10px;
+      font-size: 26px;
+}
+
+.card p {
+    margin: 10px 0;
+  font-size: 20px;
+}
+
+.card .btn {
+    padding: 8px 15px;
+    border: none;
+    background: #06b6d4;
+    color: white;
+    border-radius: 10px;
+  font-size: 24px;
+  margin-top: auto;
+   width: 80%;
+}
+
+/* 🔵 عن الموقع */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* 🔵 التواصل */
+.contact {
+    text-align: center;
+    padding: 30px;
+}
+
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+
+/* --- Media Queries for Tablets and Mobiles --- */
+
+/* الشاشات المتوسطة (Tablets) */
+@media screen and (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cards {
+        flex-wrap: wrap; /* عشان الكروت تنزل تحت بعض لو المساحة ضاقت */
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%; /* كارتين بجانب بعض في التابلت */
+        transform: translateY(0); /* إلغاء الإزاحة لضمان ظهورها في الشاشات الأصغر */
+    }
+
+    header h1 {
+        font-size: 35px;
+    }
+}
+
+/* الشاشات الصغيرة (Mobiles) */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .cards {
+        padding: 20px 10px;
+    }
+
+    .card {
+        width: 100%; /* كارت واحد في كل صف للموبايل */
+        max-width: 350px;
+    }
+
+    .btn {
+        font-size: 25px; /* تصغير حجم الزرار الكبير في الموبايل */
+        padding: 10px 20px;
+    }
+
+    .card .btn {
+        font-size: 18px; /* تصغير أزرار الكروت */
+    }
+}
+

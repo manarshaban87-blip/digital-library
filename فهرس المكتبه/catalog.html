@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فهرس المكتبة الرقمية</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+
+    <div class="logo">
+        <span>📚</span>
+        <h2>المكتبة الرقمية</h2>
+    </div>
+
+
+
+    <nav class="navbar" id="navMenu">
+
+        <ul>
+            <li><a href="../الرئيسية/Home.html">الرئيسية</a></li>
+            <li><a href="../الكتب/books.html">الكتب الإلكترونية</a></li>
+            <li><a href="../البحث/search.html">الأبحاث العلمية</a></li>
+            <li><a href="../التصنيفات/index4.html">التصنيفات</a></li>
+            <li><a href="../مصادر رقمية/resources.html">المصادر الرقمية</a></li>
+            <li><a href="../المتاحف/museums.html">المتاحف</a></li>
+            <li><a href="../المشروعات/projects.html">المشروعات</a></li>
+            <li><a href="../الذكاء الاصطناعي/ai.html">الذكاء الاصطناعي</a></li>
+            <li><a href="../اختصاصي المعلومات/specialist8.html">اختصاصي المعلومات</a></li>
+            <li><a href="../خدمة المستفدين/index9.html">خدمة المستفيدين</a></li>
+            <li><a href="../فهرس المكتبه/catalog.html">فهرس المكتبة</a></li>
+            <li><a href="../اتصل بنا/contact.html">اتصل بنا</a></li>
+           <li><a href="../الاعداد/team.html"> فريق العمل</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+    <!-- مقدمة الصفحة -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="small-title">المعرفة بين يديك</span>
+            <h2>فهرس المكتبة</h2>
+            <p>
+                استكشف الكتب الدينية، وابحث عن عناوين الكتب ومؤلفيها
+                وتصنيفاتها وبيانات النشر بسهولة.
+            </p>
+            <a href="#catalog" class="hero-button">استكشف الفهرس</a>
+        </div>
+        <div class="hero-icon">📖</div>
+    </section>
+
+    <!-- إحصائيات الفهرس -->
+    <section class="statistics">
+        <div class="stat-card">
+            <span>📚</span>
+            <h3 id="totalBooks">0</h3>
+            <p>إجمالي الكتب</p>
+        </div>
+
+        <div class="stat-card">
+            <span>✍️</span>
+            <h3 id="totalAuthors">0</h3>
+            <p>المؤلفون</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🏷️</span>
+            <h3 id="totalCategories">0</h3>
+            <p>التصنيفات</p>
+        </div>
+    </section>
+
+    <!-- فهرس الكتب -->
+    <main id="catalog" class="catalog-section">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">اكتشف مجموعتنا</span>
+                <h2>الكتب المفهرسة</h2>
+                <p>بيانات الكتب المسجلة في فهرس المكتبة.</p>
+            </div>
+        </div>
+
+        <!-- أدوات البحث والتصفية -->
+        <div class="search-panel">
+
+            <div class="search-box">
+                <label for="searchInput">البحث عن كتاب</label>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="ابحث بالعنوان أو المؤلف أو رقم الكتاب..."
+                >
+            </div>
+
+            <div class="filter-box">
+                <label for="categoryFilter">التصنيف</label>
+                <select id="categoryFilter">
+                    <option value="">جميع التصنيفات</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label for="sortBooks">ترتيب الكتب</label>
+                <select id="sortBooks">
+                    <option value="id">رقم الكتاب</option>
+                    <option value="title">العنوان أبجديًا</option>
+                    <option value="year">الأحدث نشرًا</option>
+                </select>
+            </div>
+
+            <button id="resetButton" class="reset-button">
+                إعادة ضبط
+            </button>
+
+        </div>
+
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+        <!-- جدول الفهرس -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>رقم الكتاب</th>
+                        <th>عنوان الكتاب</th>
+                        <th>المؤلف</th>
+                        <th>التصنيف</th>
+                        <th>دار النشر</th>
+                        <th>سنة النشر</th>
+                    <th>الإجراءات</th>
+                    </tr>
+                </thead>
+
+                <tbody id="booksTable">
+                    <!-- تضاف بيانات الكتب بواسطة JavaScript -->
+                </tbody>
+            </table>
+
+            <div id="emptyMessage" class="empty-message" hidden>
+                لم يتم العثور على كتب مطابقة لعملية البحث.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- نافذة تفاصيل الكتاب -->
+    <dialog id="bookDialog" class="book-dialog">
+        <button id="closeDialog" class="close-button"
+                aria-label="إغلاق النافذة">×</button>
+
+        <span class="small-title">بيانات الفهرسة</span>
+        <h2 id="detailTitle"></h2>
+
+        <div id="bookDetails" class="book-details"></div>
+
+        <button id="closeDetails" class="details-button">
+            إغلاق
+        </button>
+    </dialog>
+
+    <!-- قسم الفهرسة الرقمية -->
+    <section id="about" class="about-section">
+        <div class="about-icon">🌿</div>
+
+        <div>
+            <span class="small-title">تنظيم المعرفة الرقمية</span>
+            <h2>الفهرسة وبناء المجموعات الرقمية</h2>
+
+            <p>
+                تساعد الفهرسة على وصف الكتب وتنظيم بياناتها، مثل العنوان
+                والمؤلف والتصنيف وبيانات النشر، مما يسهل البحث عنها
+                واسترجاعها داخل المكتبة الرقمية.
+            </p>
+
+            <p>
+                ويمكن الاستفادة من نظام Greenstone في بناء المجموعات
+                الرقمية وتنظيم محتوياتها وإتاحة البحث داخلها، وفقًا
+                لإمكانات النظام وطريقة إعداد المجموعة.
+            </p>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>المكتبة الرقمية | فهرس الكتب والمراجع</p>
+        <p>© 2026 جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="script11.js"></script>
+
+</body>
+</html>

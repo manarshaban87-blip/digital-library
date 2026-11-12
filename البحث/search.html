@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المكتبة الرقمية | البحث الإلكتروني</title>
+  <link rel="stylesheet" href="style3.css">
+  <script src="script3.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <span>📚</span>
+        <h2>المكتبة الرقمية</h2>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <nav class="navbar">
+    
+
+    <ul>
+        <li><a href="../الرئيسية/Home.html">الرئيسية</a></li>
+        <li><a href="../الكتب/books.html">الكتب الإلكترونية</a></li>
+        <li><a href="../البحث/search.html">الأبحاث العلمية</a></li>
+        <li><a href="../التصنيفات/index4.html">التصنيفات</a></li>
+        <li><a href="../مصادر رقمية/resources.html">المصادر الرقمية</a></li>
+        <li><a href="../المتاحف/museums.html">المتاحف</a></li>
+        <li><a href="../المشروعات/projects.html">المشروعات</a></li>
+        <li><a href="../الذكاء الاصطناعي/ai.html">الذكاء الاصطناعي</a></li>
+        <li><a href="../اختصاصي المعلومات/specialist8.html">اختصاصي المعلومات</a></li>
+        <li><a href="../خدمة المستفدين/index9.html">خدمة المستفيدين</a></li>
+        <li><a href="../فهرس المكتبه/catalog.html">فهرس المكتبة</a></li>
+        <li><a href="../اتصل بنا/contact.html">اتصل بنا</a></li>
+    </ul>
+</nav>
+
+    <button class="theme-btn" id="themeBtn">🌙</button>
+</header>
+
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">منصة معرفية تعليمية</span>
+        <h1>ابحث، اكتشف، <em>وتعلّم</em></h1>
+        <p>
+          اكتشف مصادر في تكنولوجيا التعليم والحاسب والبحث العلمي،
+          وانتقل إلى منصات الكتب والمراجع بضغطة واحدة.
+        </p>
+        <a class="primary-btn" href="#searchSection">
+          تصفّح المصادر <span>←</span>
+        </a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="book book-one"></div>
+        <div class="book book-two"></div>
+        <div class="book book-three"></div>
+        <div class="orb">✦</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="إحصائيات المكتبة">
+      <div>
+        <strong id="totalSources">120+</strong>
+        <span>مصدر تعليمي</span>
+      </div>
+      <div>
+        <strong>6</strong>
+        <span>تصنيفات</span>
+      </div>
+      <div>
+        <strong>3</strong>
+        <span>منصات كتب مفتوحة</span>
+      </div>
+    </section>
+
+    <section class="search-section section-wrap" id="searchSection">
+
+      <div class="section-heading">
+        <span class="eyebrow">محرك البحث</span>
+        <h2>ابحث عن مصدر أو كتاب</h2>
+        <p>
+          اكتب عنوانًا أو موضوعًا أو اسم مؤلف،
+          أو استخدم التصنيفات لتضييق النتائج.
+        </p>
+      </div>
+
+      <div class="search-panel">
+
+        <div class="search-input-wrap">
+          <span class="search-symbol" aria-hidden="true">⌕</span>
+
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="مثال: التصوير الرقمي، الذكاء الاصطناعي، قواعد البيانات..."
+            autocomplete="off"
+          >
+
+          <button id="searchButton" class="search-button" type="button">
+            بحث
+          </button>
+        </div>
+
+        <div class="filter-row">
+
+          <label>
+            المجال
+            <select id="fieldFilter">
+              <option value="all">كل المجالات</option>
+              <option>تكنولوجيا التعليم</option>
+              <option>الحاسب والبرمجة</option>
+              <option>التصميم والوسائط</option>
+              <option>المكتبات والبحث العلمي</option>
+              <option>التعلم الإلكتروني</option>
+              <option>الذكاء الاصطناعي</option>
+            </select>
+          </label>
+
+          <label>
+            نوع المصدر
+            <select id="typeFilter">
+              <option value="all">كل الأنواع</option>
+              <option value="كتاب">كتب</option>
+              <option value="مقال">مقالات</option>
+              <option value="رسالة علمية">رسائل علمية</option>
+              <option value="مرجع">مراجع</option>
+              <option value="مادة تعليمية">مواد تعليمية</option>
+              <option value="دورة">دورات</option>
+            </select>
+          </label>
+
+          <button id="resetButton" class="reset-button" type="button">
+            إعادة ضبط
+          </button>
+
+        </div>
+      </div>
+
+      <div class="results-head">
+        <div>
+          <h3>نتائج البحث</h3>
+          <p id="resultsMessage">
+            تصفّح المصادر المقترحة أو ابدأ بالبحث.
+          </p>
+        </div>
+
+        <span class="result-count" id="resultsCount">
+          120 مصدرًا
+        </span>
+      </div>
+
+      <div id="loadingMessage" class="status-message" hidden>
+        جارٍ البحث في المصادر الخارجية...
+      </div>
+
+      <div
+        id="sourcesContainer"
+        class="sources-grid"
+        aria-live="polite"
+      ></div>
+
+      <div id="noResults" class="empty-state" hidden>
+        <div>⌕</div>
+        <h3>لا توجد نتائج مطابقة</h3>
+        <p>جرّب كلمة أخرى أو ابحث في الإنترنت.</p>
+
+        <button
+          id="externalSearchButton"
+          class="primary-btn"
+          type="button"
+        >
+          البحث عن الكلمة على الإنترنت
+        </button>
+      </div>
+
+      <div class="api-note">
+        يبحث الموقع في المصادر المحلية وGoogle Books وOpen Library
+        وويكيبيديا عند الاتصال بالإنترنت.
+      </div>
+
+    </section>
+
+    <section class="categories-section section-wrap" id="categories">
+
+      <div class="section-heading">
+        <span class="eyebrow">تصفّح حسب المجال</span>
+        <h2>مجالات المكتبة</h2>
+      </div>
+
+      <div class="category-tiles">
+        <button data-field="تكنولوجيا التعليم">
+          تكنولوجيا التعليم <span>↗</span>
+        </button>
+
+        <button data-field="الحاسب والبرمجة">
+          الحاسب والبرمجة <span>↗</span>
+        </button>
+
+        <button data-field="التصميم والوسائط">
+          التصميم والوسائط <span>↗</span>
+        </button>
+
+        <button data-field="التعلم الإلكتروني">
+          التعلم الإلكتروني <span>↗</span>
+        </button>
+
+        <button data-field="الذكاء الاصطناعي">
+          الذكاء الاصطناعي <span>↗</span>
+        </button>
+
+        <button data-field="المكتبات والبحث العلمي">
+          المكتبات والبحث العلمي <span>↗</span>
+        </button>
+      </div>
+
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+
+      <div>
+        <span class="eyebrow">عن المكتبة</span>
+        <h2>المعرفة أقرب إليك</h2>
+      </div>
+
+      <p>
+        تجمع هذه الصفحة موضوعات تعليمية ومداخل بحثية،
+        وتساعدك على الوصول إلى فهارس الكتب والمعاينات والمصادر المفتوحة.
+        توافر النص الكامل يعتمد على الناشر أو منصة الإتاحة.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span>المكتبة الرقمية التعليمية</span>
+    <a href="#top">العودة للأعلى ↑</a>
+  </footer>
+
+  <div class="modal-backdrop" id="detailsModal" hidden>
+
+    <section
+      class="details-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="detailTitle"
+    >
+
+      <button
+        class="close-modal"
+        id="closeModalButton"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
+      <div class="detail-icon" id="detailIcon">📚</div>
+
+      <span class="detail-type" id="detailType"></span>
+
+      <h2 id="detailTitle"></h2>
+
+      <p id="detailDescription"></p>
+
+      <div class="detail-meta" id="detailMeta"></div>
+
+      <h3>الوصول إلى الكتاب أو المصدر</h3>
+
+      <p class="small-note">
+        اختاري إحدى المنصات لفتح المصدر.
+        قد تتطلب بعض الكتب تسجيل الدخول أو لا تتيح النص الكامل.
+      </p>
+
+      <div class="link-actions" id="detailLinks"></div>
+
+    </section>
+  </div>
+
+</body>
+</html>

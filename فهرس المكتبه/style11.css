@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #F8F6F0;
+    color: #303B32;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 38px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: #365441;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #8A8174;
+}
+
+.
+/* القسم الرئيسي */
+.hero {
+    margin: 30px auto;
+    width: 86%;
+    min-height: 280px;
+    padding: 45px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #E5E8D9, #F0E4D2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #72805D;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin: 8px 0 12px;
+    color: #304D3B;
+}
+
+.hero p {
+    color: #6F7063;
+    margin-bottom: 24px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 11px 25px;
+    border-radius: 8px;
+    background-color: #47664D;
+    color: white;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #304B37;
+}
+
+.hero-icon {
+    font-size: 100px;
+    opacity: 0.8;
+}
+
+/* الإحصائيات */
+.statistics {
+    width: 86%;
+    margin: 30px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    text-align: center;
+    padding: 23px 15px;
+    border: 1px solid #E9E5D9;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px #33333305;
+}
+
+.stat-card span {
+    font-size: 27px;
+}
+
+.stat-card h3 {
+    color: #47664D;
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.stat-card p {
+    color: #827B70;
+    font-size: 14px;
+}
+
+/* قسم الفهرس */
+.catalog-section {
+    width: 86%;
+    margin: 0 auto 55px;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    color: #304D3B;
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.section-heading p,
+.about-section p {
+    color: #77776D;
+    font-size: 14px;
+}
+
+/* أدوات البحث */
+.search-panel {
+    background-color: #FFFFFF;
+    border: 1px solid #EAE6DC;
+    border-radius: 14px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-box,
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.search-panel label {
+    font-size: 13px;
+    color: #4C5B4D;
+    font-weight: bold;
+}
+
+.search-panel input,
+.search-panel select {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #DDDCD1;
+    border-radius: 7px;
+    outline: none;
+    background-color: #FCFBF7;
+    color: #42483F;
+}
+
+.search-panel input:focus,
+.search-panel select:focus {
+    border-color: #69876D;
+    box-shadow: 0 0 0 3px #69876D18;
+}
+
+.reset-button {
+    border: none;
+    background-color: #E8EBDD;
+    color: #405D43;
+    padding: 11px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #D8E0D0;
+}
+
+.results-count {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #6E7668;
+}
+
+/* جدول الكتب */
+.table-container {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 13px;
+    border: 1px solid #EAE6DC;
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: right;
+}
+
+thead {
+    background-color: #E7EBDD;
+    color: #354F3A;
+}
+
+th,
+td {
+    padding: 15px 13px;
+    border-bottom: 1px solid #EEECE5;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #FAF9F4;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.book-number {
+    color: #7B806C;
+    font-weight: bold;
+}
+
+.book-title {
+    color: #354F3A;
+    font-weight: bold;
+}
+
+.category-label {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #EDF0E5;
+    color: #52694B;
+    font-size: 12px;
+}
+
+.details-button {
+    border: none;
+    border-radius: 6px;
+    background-color: #47664D;
+    color: white;
+    padding: 7px 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.details-button:hover {
+    background-color: #304B37;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 35px 15px;
+    color: #817C71;
+}
+
+/* نافذة تفاصيل الكتاب */
+.book-dialog {
+    width: min(500px, 90%);
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #E3E0D5;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    color: #303B32;
+}
+
+.book-dialog::backdrop {
+    background-color: #202B22A8;
+}
+
+.close-button {
+    float: left;
+    border: none;
+    background: transparent;
+    color: #667260;
+    font-size: 29px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.book-dialog h2 {
+    margin: 12px 0 20px;
+    color: #365441;
+}
+
+.book-details {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.book-details p {
+    padding: 9px 12px;
+    background-color: #F7F6F0;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.book-details strong {
+    color: #47664D;
+}
+
+#closeDetails {
+    width: 100%;
+}
+
+/* زر قراءة الكتاب */
+.read-button {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    background-color: #E8EBDD;
+    color: #405D43;
+    padding: 7px 13px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.read-button:hover {
+    background-color: #D8E0D0;
+}
+
+
+/* قسم الفهرسة الرقمية */
+.about-section {
+    width: 86%;
+    margin: 0 auto 50px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    background-color: #ECEDE3;
+    border-radius: 16px;
+}
+
+.about-icon {
+    font-size: 45px;
+}
+
+.about-section p {
+    margin-top: 12px;
+}
+/* Header */
+header {
+    background: #102b46;
+    color: white;
+    padding: 15px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo span {
+    font-size: 30px;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* Navbar */
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #e5c078;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+}
+/* التذييل */
+footer {
+    text-align: center;
+    background-color: #304B3A;
+    color: #F7F5EE;
+    padding: 22px 15px;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+/* ملاءمة الشاشات الصغيرة */
+@media (max-width: 1000px) {
+    header {
+    background: #102b46;
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 30px;
+}
+
+.menu-toggle, .theme-btn {
+    background: #244967;
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+.menu-toggle {
+    display: none;
+}
+/* Responsive Design */
+
+/* الشاشات المتوسطة */
+@media (max-width: 1000px) {
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 3%;
+    }
+
+    .logo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero,
+    .statistics,
+    .catalog-section,
+    .about-section {
+        width: 92%;
+    }
+
+    .search-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* شاشات الموبايل */
+@media (max-width: 650px) {
+
+    header {
+        padding: 12px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 25px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero-icon {
+        display: none;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .search-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .about-icon {
+        display: none;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .book-dialog {
+        width: 95%;
+        padding: 20px;
+    }
+
+    table {
+        min-width: 850px;
+    }
+}

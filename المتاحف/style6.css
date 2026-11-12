@@ -1,0 +1,363 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #f7f5f0;
+    color: #333;
+    line-height: 1.8;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    direction: rtl;
+    padding: 15px 25px;
+    background: #102746;
+    gap: 15px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    color: #e5c078;
+}
+/* Hero Section */
+
+.hero {
+    min-height: 400px;
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("imag/2.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #f0d28a;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #c69b4b;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #a77d35;
+}
+
+/* Introduction */
+
+.intro {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.intro h2,
+.museums h2 {
+    color: #183b35;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 17px;
+    color: #555;
+}
+
+/* Museums Cards */
+
+.museums {
+    padding: 50px 7%;
+    text-align: center;
+}
+
+.museum-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.museum-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    transition: 0.3s;
+}
+
+.museum-card:hover {
+    transform: translateY(-8px);
+}
+
+.museum-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #183b35;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-content a {
+    display: inline-block;
+    background-color: #183b35;
+    color: white;
+    text-decoration: none;
+    padding: 9px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.card-content a:hover {
+    background-color: #c69b4b;
+}
+
+/* Search Box */
+
+.search-box {
+    margin: 25px auto;
+}
+
+.search-box input {
+    width: 80%;
+    max-width: 450px;
+    padding: 13px;
+    border: 2px solid #183b35;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #c69b4b;
+    box-shadow: 0 0 8px rgba(198,155,75,0.3);
+}
+
+#searchMessage {
+    margin-top: 12px;
+    color: #a77d35;
+    font-size: 15px;
+}
+
+/* Details Button */
+
+.details-btn {
+    display: block;
+    margin: 12px auto 0;
+    padding: 9px 25px;
+    background-color: #c69b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #a77d35;
+}
+
+/* My Museum Website */
+
+.my-website {
+    background-color: #e9e4d8;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.website-image {
+    flex: 1;
+}
+
+.website-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.website-content {
+    flex: 1;
+}
+
+.website-content h2 {
+    color: #183b35;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.website-content p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.website-content a {
+    display: inline-block;
+    background-color: #c69b4b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.website-content a:hover {
+    background-color: #a77d35;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #183b35;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.footer h3 {
+    color: #e8c77b;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+/* Back To Top Button */
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #183b35;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    transition: 0.3s;
+}
+
+.top-button:hover {
+    background-color: #c69b4b;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .my-website {
+        flex-direction: column;
+    }
+
+    .museum-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}

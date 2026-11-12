@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكتب الرقمية | المكتبة الرقمية</title>
+
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+    <div class="logo">
+        <span>📚</span>
+        <h2>المكتبة الرقمية</h2>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        ☰
+    </button>
+
+    <nav class="navbar" id="navMenu">
+
+        <ul>
+            <li><a href="../الرئيسية/Home.html">الرئيسية</a></li>
+            <li><a href="../الكتب/books.html">الكتب الإلكترونية</a></li>
+            <li><a href="../البحث/search.html">الأبحاث العلمية</a></li>
+            <li><a href="../التصنيفات/index4.html">التصنيفات</a></li>
+            <li><a href="../مصادر رقمية/resources.html">المصادر الرقمية</a></li>
+            <li><a href="../المتاحف/museums.html">المتاحف</a></li>
+            <li><a href="../المشروعات/projects.html">المشروعات</a></li>
+            <li><a href="../الذكاء الاصطناعي/ai.html">الذكاء الاصطناعي</a></li>
+            <li><a href="../اختصاصي المعلومات/specialist8.html">اختصاصي المعلومات</a></li>
+            <li><a href="../خدمة المستفدين/index9.html">خدمة المستفيدين</a></li>
+            <li><a href="../فهرس المكتبه/catalog.html">فهرس المكتبة</a></li>
+            <li><a href="../اتصل بنا/contact.html">اتصل بنا</a></li>
+           <li><a href="../الاعداد/team.html"> فريق العمل</a></li>
+
+        </ul>
+
+    </nav>
+
+    <button class="theme-btn" id="themeBtn" aria-label="تغيير المظهر">
+        🌙
+    </button>
+
+</header>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>مجموعتنا الرقمية</h2>
+            <p>
+                تصفّح مجموعة متنوعة من الكتب الرقمية،
+                واكتشف المعلومات الخاصة بكل كتاب.
+            </p>
+        </section>
+
+        <section class="search-section">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="ابحث عن اسم الكتاب أو المؤلف..."
+                aria-label="البحث عن كتاب"
+            >
+
+            <select id="categoryFilter" aria-label="تصفية الكتب حسب التصنيف">
+                <option value="all">جميع التصنيفات</option>
+                <option value="أدب">الأدب</option>
+                <option value="علوم">العلوم</option>
+                <option value="تكنولوجيا">التكنولوجيا</option>
+                <option value="تاريخ">التاريخ</option>
+            </select>
+        </section>
+
+        <p id="resultsCount" class="results-count"></p>
+
+        <section class="books-grid" id="booksGrid">
+
+            <!-- الكتاب الأول -->
+            <article class="book-card"
+                data-title="الأيام"
+                data-author="طه حسين"
+                data-year="1929"
+                data-category="أدب"
+                data-description="كتاب أدبي يسرد فيه طه حسين جانبًا من سيرته الذاتية وتجربته في الحياة والتعليم."
+                data-file="../الكتب/ملفات الكتب/الأيام_Foulabook.com_.pdf">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=80"
+                    alt="غلاف كتاب الأيام"
+                    class="book-cover"
+                >
+
+                <div class="book-info">
+                    <span class="category">الأدب</span>
+                    <h3>الأيام</h3>
+                    <p><strong>المؤلف:</strong> طه حسين</p>
+                    <p><strong>سنة النشر:</strong> 1929</p>
+
+                    <div class="card-buttons">
+                        <button class="details-btn" type="button">
+                            عرض التفاصيل
+                        </button>
+                        <button class="read-btn" type="button">
+                            قراءة الكتاب
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- الكتاب الثاني -->
+            <article class="book-card"
+                data-title="عالم المعرفة"
+                data-author="مجموعة مؤلفين"
+                data-year="2020"
+                data-category="علوم"
+                data-description="كتاب نموذجي للتعريف بالمعارف العلمية ومجالات العلوم المختلفة."
+                data-file="../الكتب/ملفات الكتب/2.pdf">
+
+                <img
+                    src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&auto=format&fit=crop&q=80"
+                    alt="غلاف كتاب عالم المعرفة"
+                    class="book-cover"
+                >
+
+                <div class="book-info">
+                    <span class="category">العلوم</span>
+                    <h3>عالم المعرفة</h3>
+                    <p><strong>المؤلف:</strong> مجموعة مؤلفين</p>
+                    <p><strong>سنة النشر:</strong> 2020</p>
+
+                    <div class="card-buttons">
+                        <button class="details-btn" type="button">
+                            عرض التفاصيل
+                        </button>
+                        <button class="read-btn" type="button">
+                            قراءة الكتاب
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- الكتاب الثالث -->
+            <article class="book-card"
+                data-title="مدخل إلى الذكاء الاصطناعي"
+                data-author="مارك كوكلبيرج "
+                data-year="2024"
+                data-category="تكنولوجيا"
+                data-description="مادة تعريفية مبسطة حول الذكاء الاصطناعي وتطبيقاته في الحياة والتعليم."
+                data-file="../الكتب/ملفات الكتب/3.pdf">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop&q=80"
+                    alt="غلاف كتاب الذكاء الاصطناعي"
+                    class="book-cover"
+                >
+
+                <div class="book-info">
+                    <span class="category">التكنولوجيا</span>
+                    <h3>مدخل إلى الذكاء الاصطناعي</h3>
+                    <p><strong>المؤلف:</strong> مارك كوكلبيرج  </p>
+                    <p><strong>سنة النشر:</strong> 2024</p>
+
+                    <div class="card-buttons">
+                        <button class="details-btn" type="button">
+                            عرض التفاصيل
+                        </button>
+                        <button class="read-btn" type="button">
+                            قراءة الكتاب
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            
+
+<!-- الكتاب الرابع -->
+            <article class="book-card"
+                data-title="  تاريخ الحضارات "
+                data-author=" آدم جيه سيلفرستاين.  "
+                data-year="2013"
+                data-category="الحضارة والتاريخ"
+                data-description="مادة تعريفية مبسطة حول الذكاء الاصطناعي وتطبيقاته في الحياة والتعليم."
+                data-file="../الكتب/ملفات الكتب/4.pdf">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=500&auto=format&fit=crop&q=80"
+                    alt="غلاف كتاب  تاريخ الحضارات"
+                    class="book-cover"
+                >
+
+                <div class="book-info">
+                    <span class="category">تاريخ الحضارات</span>
+                    <h3>مدخل إلى  الحضارة الاسلامية</h3>
+                    <p><strong>المؤلف:</strong>   آدم جيه سيلفرستاين.</p>
+                    <p><strong>سنة النشر:</strong> 2013</p>
+
+                    <div class="card-buttons">
+                        <button class="details-btn" type="button">
+                            عرض التفاصيل
+                        </button>
+                        <button class="read-btn" type="button">
+                            قراءة الكتاب
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <p id="noResults" class="no-results" hidden>
+            لا توجد كتب تطابق البحث.
+        </p>
+
+    </main>
+
+    <!-- نافذة تفاصيل الكتاب -->
+    <div class="modal" id="detailsModal" hidden>
+        <div class="modal-content" role="dialog"
+            aria-modal="true" aria-labelledby="modalTitle">
+
+            <button class="close-btn" id="closeModal"
+                type="button" aria-label="إغلاق">×</button>
+
+            <h2 id="modalTitle"></h2>
+            <p id="modalAuthor"></p>
+            <p id="modalYear"></p>
+            <p id="modalCategory"></p>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+<!-- نافذة قراءة الكتاب داخل الموقع -->
+<div class="reader-modal" id="readerModal" hidden>
+    <div class="reader-content">
+
+        <div class="reader-header">
+            <h2 id="readerTitle">قراءة الكتاب</h2>
+
+            <button id="closeReader" type="button">
+                ✕ إغلاق
+            </button>
+        </div>
+
+        <iframe
+            id="bookFrame"
+            title="قارئ الكتاب الإلكتروني"
+        ></iframe>
+
+    </div>
+</div>
+    <footer>
+        <p>المكتبة الرقمية © 2026</p>
+    </footer>
+
+</body>
+</html>

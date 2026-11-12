@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body{
+    font-family: "Cairo", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   
+    header a{
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+       }
+    .container{
+        width: 70%;
+        margin: auto;
+    }
+   nav li{
+        list-style: none;
+    }
+    .container .nave-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        color: #ffffff;
+       
+    }
+    .nave-bar .links nav ul{
+        display: flex;
+        gap: 20px;
+        
+        }
+.nave-bar{
+    width: 100%;
+    top: 0;
+    left: 0;
+    position:absolute;
+    background: rgba(0,  0, 0, 0.5);
+
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero{
+    color: #ffffff;
+   background: url(../assets/am.jpg)no-repeat center/cover;
+   padding: 100px 20px;
+   background-position: center;
+   background-size: cover;
+   height:300px;
+   border-radius: 20px;
+}
+
+.title h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    word-spacing: 6px;
+    margin-top: 30px;
+
+
+}
+.title h3{
+    font-size: 20px;
+    color: #ffffff;
+    word-spacing: 5px;
+
+}
+.hero2{
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #f8f7f7f5;
+    border-radius: 20px;
+    margin-top: 20px;
+
+
+}
+
+.hero2-img img{
+    border-radius: 15px;
+
+}
+.hero2 .hero2-content{
+    padding-top: 100px;
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
+.hero2-content h1 {
+    color: #5C4033;
+    padding-bottom: 15px;
+    
+}
+.hero3{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #f8f7f7f5;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 40px;
+}
+.hero3 h2{
+  color: #5C4033;
+  padding: 40px;
+  font-size: 30px;
+  text-align: center;
+
+
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row-reverse;
+   flex-wrap: wrap;
+   padding-top: 20px;
+  
+}
+.cards .card1{
+    width:350px;
+    height: 300px;
+    padding: 15px;
+   border-radius: 20px;
+   background-color: #F8F6F2;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+.cards .card1:hover{
+    transform: translateY(-5px);
+}
+.cards .card1 h3{
+    text-align: center;
+    color: #420e0e;
+    font-size: 20px;
+   padding-bottom: 10px;
+
+}
+.cards .card1 p{
+  font-size:17px;
+  text-align: right;
+
+}
+.break{
+    flex-basis: 100%;
+}
+
+.cards .card2{
+    width:350px;
+    border-radius: 20px;
+    
+}
+.cards .card2 img{
+    border-radius: 20px;
+    
+}
+.card2 h3{
+  padding: 15px 0 10px;
+  color:  #420e0e;
+}
+.card2 ul li{
+text-align: right;
+margin-right: 70px;
+list-style-position: inside;
+direction: rtl;
+}
+.card2 p{
+    text-align: center;
+    margin-right: 70px;
+    padding: 10px 0 10px;
+    text-decoration: underline;
+    color:  #420e0e;
+
+}
+
+.img-hero3 img{
+    width: 500px;
+    height: 450px;
+   margin-top: 80px;
+   border-radius: 20px;
+ 
+
+}
+.cards-hero2{
+  
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+       padding-top: 80px;
+      
+   
+}
+.cards-hero2 .card-hero2{
+   width:300px;
+    height:175px;
+    padding: 15px;
+   border-radius: 20px;
+   background-color:#F8F6F2;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   transition: transform 0.3s ease;
+}
+.cards-hero2 .card-hero2:hover{
+    transform: translateY(-5px);
+
+}
+.card-hero2 h3{
+    text-align: center;
+    color: #420e0e;
+    font-size: 19px;
+   padding-bottom: 10px;
+}
+.card-hero2 p{
+    font-size:17px;
+    text-align: right;
+}
+.img-hero3 h2{
+    color: #5C4033;
+    text-align:center ;
+    font-size: 30px;
+    margin-top:20px ;
+}
+
+ .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    
+}
+  .button1 button{
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background: transparent;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+}
+.button1 button:hover{
+    background-color:#eaddd3;
+    color: #000;
+    box-shadow: 0 0 15px  #5C4033; 
+    transform: translateY(-3px);
+}
+
+
+
+
+/* Media Queries for Tablets and Mobile Devices */
+
+/* تظبيطات الشاشات المتوسطة (Tablets) */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    .hero2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero2 .hero2-content {
+        padding-top: 20px;
+    }
+    .img-hero3 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* تظبيطات الموبايل (Mobile Devices) */
+@media screen and (max-width: 768px) {
+    /* الهيدر والناف بار */
+    .container .nave-bar {
+        flex-direction: column-reverse;
+        gap: 15px;
+        text-align: center;
+    }
+    .nave-bar .links nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* قسم الترحيب */
+    .hero {
+        padding: 150px 10px 50px; /* زيادة البادنج عشان الناف بار */
+        height: auto;
+    }
+    .title h1 {
+        font-size: 28px;
+    }
+    .title h3 {
+        font-size: 16px;
+    }
+
+    /* الأقسام والمحتوى */
+    .hero2, .hero3 {
+        padding: 20px;
+    }
+    .hero2-img img {
+        width: 100%;
+        height: auto;
+    }
+  .cards .card2 h3{
+    text-align: center;
+  }
+    
+    /* الكروت */
+    .cards .card1, .cards .card2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .cards .card2 img{
+        width: 300px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+    }
+    .break {
+        display: none; /* بنلغي الفاصل عشان الكروت تاخد مساحتها */
+    }
+
+    /* مستقبل الذكاء الاصطناعي */
+    .img-hero3 img {
+        margin-top: 20px;
+    }
+    .cards-hero2 {
+        padding-top: 30px;
+        align-items: center;
+    }
+    .cards-hero2 .card-hero2 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* الأزرار */
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .button1 {
+        width: 100%;
+    }
+    .button1 button {
+        width: 100%;
+    }
+}

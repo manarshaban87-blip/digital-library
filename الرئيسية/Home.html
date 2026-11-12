@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتبة الرقمية</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- شريط التنقل -->
+<header>
+
+    <div class="logo">
+        <span>📚</span>
+        <h2>المكتبة الرقمية</h2>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        ☰
+    </button>
+
+    <nav class="navbar" id="navMenu">
+
+        <ul>
+            <li><a href="../الرئيسية/Home.html">الرئيسية</a></li>
+            <li><a href="../الكتب/books.html">الكتب الإلكترونية</a></li>
+            <li><a href="../البحث/search.html">الأبحاث العلمية</a></li>
+            <li><a href="../التصنيفات/index4.html">التصنيفات</a></li>
+            <li><a href="../مصادر رقمية/resources.html">المصادر الرقمية</a></li>
+            <li><a href="../المتاحف/museums.html">المتاحف</a></li>
+            <li><a href="../المشروعات/projects.html">المشروعات</a></li>
+            <li><a href="../الذكاء الاصطناعي/ai.html">الذكاء الاصطناعي</a></li>
+            <li><a href="../اختصاصي المعلومات/specialist8.html">اختصاصي المعلومات</a></li>
+            <li><a href="../خدمة المستفدين/index9.html">خدمة المستفيدين</a></li>
+            <li><a href="../فهرس المكتبه/catalog.html">فهرس المكتبة</a></li>
+            <li><a href="../اتصل بنا/contact.html">اتصل بنا</a></li>
+           <li><a href="../الاعداد/team.html"> فريق العمل</a></li>
+
+        </ul>
+
+    </nav>
+
+    <button class="theme-btn" id="themeBtn" aria-label="تغيير المظهر">
+        🌙
+    </button>
+
+</header>
+
+<!-- الواجهة الرئيسية -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="welcome">مرحباً بك في عالم المعرفة</span>
+
+        <h1>المكتبة الرقمية</h1>
+
+        <h3>معرفتك تبدأ من هنا</h3>
+
+        <p>
+            اكتشف عالماً من الكتب والأبحاث والمراجع التعليمية.
+            اجعل المعرفة أقرب إليك في أي وقت ومن أي مكان.
+        </p>
+
+        <a href="#books" class="main-btn">
+            ابدأ القراءة ←
+        </a>
+
+    </div>
+
+</section>
+
+<!-- الإحصائيات -->
+<section class="statistics">
+
+    <div class="stat">
+        <span>📚</span>
+        <h2 id="bookCount">0</h2>
+        <p>عدد الكتب</p>
+    </div>
+
+    <div class="stat">
+        <span>📂</span>
+        <h2>4</h2>
+        <p>أقسام المكتبة</p>
+    </div>
+
+    <div class="stat">
+        <span>🎓</span>
+        <h2>24/7</h2>
+        <p>متاحة دائماً</p>
+    </div>
+
+</section>
+
+<!-- البحث الشامل -->
+<section class="search-section" id="search">
+
+    <h2>ابحثي في المكتبة الرقمية</h2>
+
+    <p>
+        ابحث عن الكتب والأبحاث والمراجع التعليمية بسهولة
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="اكتب اسم الكتاب أو المؤلف أو الصفحة..."
+            autocomplete="off"
+        >
+
+        <button type="button" id="searchBtn">
+            بحث 🔍
+        </button>
+
+    </div>
+
+    <div id="searchMessage" aria-live="polite"></div>
+
+    <div id="searchResults" class="search-results" aria-live="polite"></div>
+
+</section>
+
+<!-- أقسام المكتبة -->
+<section class="sections" id="sections">
+
+    <h2 class="section-title">أقسام المكتبة</h2>
+
+    <p class="subtitle">
+        اختر القسم الذي تريد استكشافه
+    </p>
+
+    <div class="cards">
+
+        <div class="card" data-category="الكتب الإلكترونية">
+
+            <div class="card-icon">📚</div>
+
+            <h3>الكتب الإلكترونية</h3>
+
+            <p>كتب في مختلف المجالات والتخصصات.</p>
+
+            <a href="../الكتب/books.html" class="category-btn">
+                تصفح الكتب
+            </a>
+
+        </div>
+
+        <div class="card" data-category="الأبحاث العلمية">
+
+            <div class="card-icon">📄</div>
+
+            <h3>الأبحاث العلمية</h3>
+
+            <p>أبحاث ودراسات علمية متنوعة.</p>
+
+            <a href="../البحث/search.html" class="category-btn">
+                تصفح الأبحاث
+            </a>
+
+        </div>
+
+        <div class="card" data-category="المراجع التعليمية">
+
+            <div class="card-icon">🎓</div>
+
+            <h3>التصنيفات</h3>
+
+            <p>
+                استكشف تصنيفات الكتب واختر القسم المناسب لك بسهولة.
+            </p>
+
+            <a href="../التصنيفات/index4.html" class="category-btn">
+                تصفح التصنيفات
+            </a>
+
+        </div>
+
+        <div class="card" data-category="المصادر الإلكترونية">
+
+            <div class="card-icon">💻</div>
+
+            <h3>المصادر الإلكترونية</h3>
+
+            <p>مواقع ومصادر رقمية مفيدة.</p>
+
+            <a href="../مصادر رقمية/resources.html" class="category-btn">
+                تصفح المصادر
+            </a>
+
+        </div>
+
+        <div class="card" data-category="المشروعات">
+
+            <div class="card-icon">🎓</div>
+
+            <h3>المشروعات</h3>
+
+            <p>
+                اكتشف مجموعة متنوعة من المشروعات والأفكار المميزة.
+            </p>
+
+            <a href="../المشروعات/projects.html" class="category-btn">
+                تصفح المشروعات
+            </a>
+
+        </div>
+
+        <div class="card" data-category="المتاحف">
+
+            <div class="card-icon">🏛️</div>
+
+            <h3>المتاحف</h3>
+
+            <p>
+                تعرف على أشهر المتاحف واكتشف كنوزها التاريخية.
+            </p>
+
+            <a href="../المتاحف/museums.html" class="category-btn">
+                تصفح المتاحف
+            </a>
+
+        </div>
+
+        <div class="card" data-category="الذكاء الاصطناعي">
+
+            <div class="card-icon">🤖</div>
+
+            <h3>الذكاء الاصطناعي</h3>
+
+            <p>
+                اكتشف دور الذكاء الاصطناعي في تطوير وتسهيل التعليم.
+            </p>
+
+            <a href="../الذكاء الاصطناعي/ai.html" class="category-btn">
+                تصفح الذكاء الاصطناعي
+            </a>
+
+        </div>
+
+        <div class="card" data-category="اختصاصي المعلومات">
+
+            <div class="card-icon">🧑‍💻</div>
+
+            <h3>اختصاصي المعلومات</h3>
+
+            <p>
+                تعرف على مجال اختصاصي المعلومات وأهميته في تنظيم المعرفة وإدارتها.
+            </p>
+
+            <a href="../اختصاصي المعلومات/specialist8.html" class="category-btn">
+                تصفح اختصاصي المعلومات
+            </a>
+
+        </div>
+
+        <div class="card" data-category="خدمة المستفيدين">
+
+            <div class="card-icon">🤝</div>
+
+            <h3>خدمة المستفيدين</h3>
+
+            <p>
+                تعرف على خدمات المكتبة وطرق دعم المستفيدين وتلبية احتياجاتهم.
+            </p>
+
+            <a href="../خدمة المستفدين/index9.html" class="category-btn">
+                تصفح خدمة المستفيدين
+            </a>
+
+        </div>
+
+        <div class="card" data-category="فهرس المكتبة">
+
+            <div class="card-icon">📋</div>
+
+            <h3>فهرس المكتبة</h3>
+
+            <p>
+                ابحث عن الكتب والمراجع بسهولة من خلال فهرس المكتبة الرقمية.
+            </p>
+
+            <a href="../فهرس المكتبه/catalog.html" class="category-btn">
+                تصفح الفهرس
+            </a>
+
+        </div>
+
+        <div class="card" data-category="التواصل">
+
+            <div class="card-icon">✉️</div>
+
+            <h3>التواصل</h3>
+
+            <p>
+                تواصل معنا للاستفسارات والمساعدة والإجابة عن جميع التساؤلات.
+            </p>
+
+            <a href="../اتصل بنا/contact.html" class="category-btn">
+                اتصل بنا
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- الكتب -->
+<section class="books" id="books">
+
+    <div class="books-heading">
+
+        <div>
+            <h2 class="section-title">مكتبة الكتب</h2>
+            <p class="subtitle">اكتشف أحدث الكتب والمراجع</p>
+        </div>
+
+        <button class="add-btn" id="openAddModal" type="button">
+            + إضافة كتاب
+        </button>
+
+    </div>
+
+    <div class="filters">
+
+        <button class="filter-btn active" type="button" data-filter="الكل">
+            الكل
+        </button>
+
+        <button class="filter-btn" type="button" data-filter="الكتب الإلكترونية">
+            الكتب
+        </button>
+
+        <button class="filter-btn" type="button" data-filter="الأبحاث العلمية">
+            الأبحاث
+        </button>
+
+        <button class="filter-btn" type="button" data-filter="المراجع التعليمية">
+            المراجع
+        </button>
+
+        <button class="filter-btn" type="button" data-filter="المصادر الإلكترونية">
+            المصادر
+        </button>
+
+        <button class="filter-btn" type="button" data-filter="المفضلة">
+            ❤️ المفضلة
+        </button>
+
+    </div>
+
+    <div class="book-container" id="bookContainer"></div>
+
+    <p id="emptyMessage" class="empty-message">
+        لا توجد كتب مطابقة لبحثك.
+    </p>
+
+</section>
+
+<!-- المشروعات -->
+<section class="projects" id="projects">
+
+    <h2>المشروعات التعليمية</h2>
+
+    <p>
+        اكتشف المشروعات والأنشطة التعليمية التي تساعدك
+        على تنمية مهاراتك ومعارفك.
+    </p>
+
+    <a href="../المشروعات/projects.html" class="main-btn">
+        اكتشف المزيد
+    </a>
+
+</section>
+
+<!-- نبذة عن المكتبة -->
+<section class="about" id="about">
+
+    <h2 class="section-title">من نحن؟</h2>
+
+    <p>
+        المكتبة الرقمية منصة إلكترونية تهدف إلى توفير مصادر
+        المعلومات والمعرفة بصورة رقمية، وتسهيل الوصول إلى الكتب
+        والأبحاث والمراجع التعليمية، بما يدعم التعلم والبحث العلمي.
+    </p>
+
+</section>
+
+<!-- نافذة تفاصيل الكتاب -->
+<div class="modal" id="detailsModal">
+
+    <div class="modal-content">
+
+        <button class="close-btn" type="button" data-close="detailsModal">
+            ✕
+        </button>
+
+        <div id="bookDetails"></div>
+
+    </div>
+
+</div>
+
+<!-- نافذة إضافة كتاب -->
+<div class="modal" id="addModal">
+
+    <div class="modal-content">
+
+        <button class="close-btn" type="button" data-close="addModal">
+            ✕
+        </button>
+
+        <h2>إضافة كتاب جديد</h2>
+
+        <form id="addBookForm">
+
+            <label for="newTitle">اسم الكتاب</label>
+
+            <input type="text" id="newTitle" required>
+
+            <label for="newAuthor">اسم المؤلف</label>
+
+            <input type="text" id="newAuthor" required>
+
+            <label for="newCategory">القسم</label>
+
+            <select id="newCategory" required>
+
+                <option value="الكتب الإلكترونية">الكتب الإلكترونية</option>
+
+                <option value="الأبحاث العلمية">الأبحاث العلمية</option>
+
+                <option value="المراجع التعليمية">المراجع التعليمية</option>
+
+                <option value="المصادر الإلكترونية">المصادر الإلكترونية</option>
+
+            </select>
+
+            <label for="newDescription">وصف الكتاب</label>
+
+            <textarea id="newDescription" required></textarea>
+
+            <label for="newPdf">رابط ملف PDF (اختياري)</label>
+
+            <input
+                type="url"
+                id="newPdf"
+                placeholder="https://example.com/book.pdf"
+            >
+
+            <button type="submit" class="add-btn">
+                حفظ الكتاب
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- رسائل التنبيه -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- تذييل الصفحة -->
+<footer>
+
+    <h3>📚 المكتبة الرقمية</h3>
+
+    <p>بوابتك إلى المعرفة والتعلم</p>
+
+    <p>
+        جميع الحقوق محفوظة ©
+        <span id="year"></span>
+    </p>
+
+</footer>
+
+<script src="script1.js"></script>
+
+</body>
+</html>

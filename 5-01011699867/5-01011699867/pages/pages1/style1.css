@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body {
+ font-family: "Cairo", sans-serif;
+  background: #f3f0eb;
+  direction: rtl;
+  margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 40px;
+    top: 0;
+}
+/* اللوجو */
+.logo{
+    color: white;
+}
+/* المينيو */
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+/* اللينكات */
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+.navbar ul li a:hover{
+    color: gold;
+}
+/* الهيدر */
+.header {
+  background: #b9916d;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.header-text {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* الكروت */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 30%;
+  border-radius: 15px;
+  overflow: hidden;
+text-align: center;
+transition: 0.3s;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-sizing: border-box;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 15px 15px;
+  color: #444;
+  
+}
+.card-image img {
+  width: 100%;
+  object-fit: cover;
+}
+.card-button {
+  text-align: center;
+  padding: 10px 20px;
+  background: #997b63;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto;
+  margin: 0 auto;
+  transition: background 0.3s ease; /* تأثير التغيير في اللون */
+  margin-bottom: 15px;
+}
+
+.card-button a {
+  color: white; /* الكتابة باللون الأبيض */
+  text-decoration: none; /* إزالة الخط تحت الرابط */
+}
+
+.card-button:hover {
+  background: #754f33; /* تغيير اللون عند التمرير */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* إضافة الظل */
+}
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+    }
+
+    .navbar .logo {
+        font-size: 18px;
+        order: 1; /* جعل اللوجو يظهر أولاً */
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 10px;
+        flex-direction: row-reverse; /* جعل الروابط تظهر على الجهة اليمنى */
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        list-style: none;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero h3 {
+        font-size: 12px;
+    }
+
+    .cards {
+        gap: 12px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,125 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* الناف بار */
+.navbar {
+    background: #457BCA;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 25px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* محتوى الصفحة في النص */
+.contact-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    text-align: center;
+    color: #457BCA;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+input:focus, textarea:focus {
+    border-color: #457BCA;
+    outline: none;
+}
+
+button {
+    background-color: #457BCA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #3560a8;
+}
+
+/* تنسيق رسالة النجاح التفاعلية */
+#success-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+}
+
+.contact-info {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #555;
+}
+
+.contact-info h3 {
+    color: #457BCA;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 15px;
+}
