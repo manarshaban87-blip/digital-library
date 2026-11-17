@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #FFFFFF;
+    color: #1C0808;
+    line-height: 1.6;
+}
+
+/* --- 2. الهيدر (Nav & Title) --- */
+.main-header {
+    background-color: #D4E0E7;
+    /* خلفية أغمق شوية للهيدر */
+
+    padding: 5px 0 0;
+    border-bottom: 5px solid #ffffff;
+    /* خط أبيض شيك */
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+/* حركة بسيطة للينكات لما تقفي عليها */
+.main-nav a:hover {
+    color: #00ffff;
+    /* النيون Cyan */
+}
+
+/* --- 3. الجزء الأساسي (Container) --- */
+.container {
+    border: 2px solid #F2EEE4;
+    /* برواز موف هادي */
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-image: url('../assets/10.jpg');
+
+
+}
+
+/* كلاس مشترك للكروت الشفافة (About & Team) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* شفافية بسيطة */
+    border-radius: 20px;
+    padding: 30px;
+    border: 3px solid rgba(218, 176, 137, 1);
+    /* برواز خفيف */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    /* ظل خفيف للعمق */
+    margin-bottom: 40px;
+}
+
+/* العناوين الداخلية */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+
+}
+
+/* --- أ. قسم "عن المشروع" (About) --- */
+.about-section h1 {
+    color: #457BCA;
+    /* النيون Cyan للعناوين */
+    font-size: 50px;
+
+}
+
+.about-section h3 {
+    color: #5378DF;
+
+
+}
+
+.about-section p {
+    font-size: 30px;
+}
+
+.header-content {
+    background-image: url('../assets/7.jpg');
+    width: 1000px;
+    height: 80px;
+
+}
+
+/* --- ب. قسم "أهداف المشروع" (Goals Cards) --- */
+.goals-section {
+    margin-bottom: 40px;
+    color: #4E78ED;
+    font-size: 40px;
+    text-align: center;
+}
+
+.goals-grid {
+    display: flex;
+    flex-direction: column;
+    /* يضمن إنهم صف واحد */
+    flex-wrap: nowrap;
+    /* يمنعهم ينزلوا تحت بعض */
+    gap: 20px;
+    justify-content: center;
+
+}
+
+
+
+
+/* تنسيق الكارت الواحد */
+.goal-card {
+    flex: 1 1 calc(33.333% - 20px);
+    /* كود سحري: 3 كروت في الصف */
+
+    background-image: url('../assets/10.jpg');
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 4px solid #DEC27D;
+    /* برواز موف هادي */
+    transition: transform 0.4s, box-shadow 0.6s;
+}
+
+
+/* حركة تلوين الكتاب لما تقفي عليه (التكة البرتغالية) */
+.goal-card:hover {
+    transform: translateY(-5px);
+    /* رفع الكارت بسيط */
+}
+
+/* كلاسات التظليل المنيرة (Glowing Effects) */
+.cyan-shadow:hover {
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+    /* ظل Cyan منور */
+}
+
+.purple-shadow:hover {
+    box-shadow: 0 10px 30px rgba(75, 0, 130, 0.5);
+    /* ظل موف منور */
+}
+
+.goal-card img {
+    max-width: 700px;
+    border-radius: 10%;
+    /* اللوجو دائري */
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    /* خلفية بيضاء عشان تظهره */
+    padding: 5px;
+    border: 2px solid rgba(74, 59, 23, 1);
+    /* برواز موف هادي */
+
+}
+
+.goal-card h3 {
+    font-size: 40px;
+    color: #265FCB;
+    margin-bottom: 15px;
+}
+
+.goal-card p {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.team-section {
+
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+
+    background: rgba(238, 238, 238, 0.44);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #1031B6D1;
+    transition: 0.3s;
+    border: 4px solid #FBD167;
+    /* برواز موف هادي */
+
+}
+
+
+
+
+/* الأسماء */
+.team-names {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team-names p {
+    background: rgba(255, 255, 255, 0.35);
+    padding: 8px 15px;
+    border-radius: 20px;
+
+    border: 2px solid #4A380C;
+    /* برواز موف هادي */
+    font-size: 16px;
+    color: #000000;
+    font-size: 26px;
+    transition: 0.3s;
+
+}
+
+/* حركة بسيطة شيك */
+.team-names p:hover {
+    background: rgba(248, 210, 164, 1);
+    /* لون برجندي */
+    color: white;
+}
+
+/* المشرف */
+.supervisor {
+    margin-top: 20px;
+    font-size: 35px;
+    color: rgba(62, 46, 22, 1);
+    background: #E6D5A9;
+    border: 2px solid #B2903F;
+    /* برواز موف هادي */
+}
+
+
+/* --- Media Queries For Responsiveness --- */
+
+/* الشاشات المتوسطة (Tablets) */
+@media screen and (max-width: 1024px) {
+    .header-content {
+        width: 95%;
+        height: auto;
+        /* إلغاء الارتفاع الثابت */
+        min-height: 80px;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .about-section h1 {
+        font-size: 35px;
+    }
+
+    .about-section p {
+        font-size: 24px;
+    }
+
+    .goal-card img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* الشاشات الصغيرة (Mobile Phones) */
+@media screen and (max-width: 768px) {
+
+    /* تعديل الهيدر ليناسب الموبايل */
+    .header-content {
+        width: 100%;
+        height: auto;
+        padding: 15px 5px;
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        /* الحفاظ على اللينكات بجانب بعض أو استخدام wrap */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .main-nav a {
+        font-size: 18px;
+    }
+
+    .main-title {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* تعديل جسم الصفحة والـ Container */
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    /* تحويل شبكة الأهداف إلى عمود واحد */
+    .goals-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .goal-card {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* تصغير الخطوط الكبيرة جداً لتناسب الموبايل */
+    .about-section h1 {
+        font-size: 28px;
+    }
+
+    .about-section p {
+        font-size: 20px;
+    }
+
+    .goal-card h3 {
+        font-size: 26px;
+    }
+
+    .goal-card p {
+        font-size: 18px;
+    }
+
+    .goals-section {
+        font-size: 28px;
+    }
+
+    /* تعديل قسم الفريق */
+    .team-names {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-names p {
+        font-size: 18px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .supervisor {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+/* الشاشات الصغيرة جداً (Extra Small Devices) */
+@media screen and (max-width: 480px) {
+    .glass-card {
+        padding: 15px;
+    }
+
+    .about-section h1 {
+        font-size: 24px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+}

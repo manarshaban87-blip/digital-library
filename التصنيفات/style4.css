@@ -32,7 +32,7 @@ body {
 /* Navbar */
 
 .header {
-    background-color: #8899e2;
+    background: linear-gradient(135deg, #173b35, #39776a);
     color: white;
     padding: 20px 6%;
     display: flex;

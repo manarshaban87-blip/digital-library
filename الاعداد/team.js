@@ -1,45 +1,70 @@
 // أسماء أعضاء فريق العمل
-
 const teamMembers = [
 
-    "1-منار شعبان عبدالمجيد ",
-    " إيمان كرم نصر إبراهيم-2",
-    " خلود محمود فتحي-3",
-    " -4شهد عاطف إبراهيم عبدالله",
-    "فاطمة نزيه عبدالفتاح -5",
-    " نيره سميرعفيفي الاكرت-6",
-    " -7نسمة محمد عبدالجابر",
-    " هاجر مسعود محمد خميس-8",
-    "ياسمين طاهر يحي- 9",
-    "ندى أحمد محمد أحمد- 10",
-    "نورهان بحيري خاطر-11",
-    "أيه عاطف أبو العزم-12",
-    " نورا محمود متولي-13",
-    "نورهان يحيي سعيد-14",
-    " أماني عزت عمر-15"
+    "منار شعبان عبدالمجيد",
+    "إيمان كرم نصر إبراهيم",
+    "خلود محمود فتحي",
+    "شهد عاطف إبراهيم عبدالله",
+    "فاطمة نزيه عبدالفتاح",
+    "نيره سميرعفيفي الاكرت",
+    "نسمة محمد عبدالجابر",
+    "هاجر مسعود محمد خميس",
+    "ياسمين طاهر يحي",
+    "ندى أحمد محمد أحمد",
+    "نورهان بحيري خاطر",
+    "أيه عاطف أبو العزم",
+    "نورا محمود متولي",
+    "نورهان يحيي سعيد",
+    "أماني عزت عمر"
 
 ];
 
 // عرض أعضاء الفريق
-
 const container = document.getElementById("teamContainer");
 
 teamMembers.forEach((member, index) => {
 
     const card = document.createElement("div");
-
     card.className = "member-card";
 
+    // الأيقونة والوصف
     card.innerHTML = `
-
         <div class="member-icon">👩🏻‍💻</div>
-
-        <h3>${member}</h3>
-
         <p>عضوة في فريق إعداد المكتبة الرقمية</p>
-
     `;
 
+    // إنشاء عنوان الاسم
+    const heading = document.createElement("h3");
+
+    heading.style.display = "flex";
+    heading.style.flexDirection = "row";
+    heading.style.direction = "rtl";
+    heading.style.justifyContent = "center";
+    heading.style.alignItems = "center";
+    heading.style.gap = "6px";
+    heading.style.textAlign = "center";
+
+    // الرقم
+    const number = document.createElement("span");
+    number.textContent = (index + 1) ;
+    number.style.direction = "ltr";
+    number.style.unicodeBidi = "isolate";
+    number.style.flexShrink = "0";
+
+    // الاسم
+    const name = document.createElement("span");
+    name.textContent = member;
+    name.style.direction = "rtl";
+    name.style.unicodeBidi = "isolate";
+
+    // إضافة الرقم والاسم
+    heading.appendChild(number);
+    heading.appendChild(name);
+
+    // وضع الاسم بين الأيقونة والوصف
+    card.insertBefore(heading, card.querySelector("p"));
+
+    // إضافة الكارت للصفحة
     container.appendChild(card);
 
 });

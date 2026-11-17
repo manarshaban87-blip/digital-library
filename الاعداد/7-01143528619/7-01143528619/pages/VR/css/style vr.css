@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+nav li {
+    list-style: none;
+}
+
+.container .nave-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    color: #ffffff;
+
+}
+
+.nave-bar .links nav ul {
+    display: flex;
+    gap: 20px;
+
+}
+
+.nave-bar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.one {
+    color: #000000;
+    background: url(../assets/vr2.jpg)no-repeat center/cover;
+    padding: 100px 20px;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    border-radius: 20px;
+
+}
+
+.two {
+    background-color: #f8f7f7f5;
+    border-radius: 20px;
+}
+
+.two-one {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding: 40px;
+
+
+}
+
+.two-one img {
+    border-radius: 15px;
+    display: flex;
+
+}
+
+
+.two-one .content {
+    padding-top: 100px;
+    font-size: 20px;
+    text-align: right;
+
+
+}
+
+.content h1 {
+    display: flex;
+    justify-content: center;
+    color: #5C4033;
+    padding-bottom: 15px;
+
+}
+
+.two-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.two-2 h2 {
+    color: #5C4033;
+    padding: 40px;
+    font-size: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+}
+
+.cards .card1 {
+    width: 350px;
+    height: 300px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #F8F6F2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+
+.cards .card1:hover {
+    transform: translateY(-5px);
+}
+
+.cards .card1 img {
+    border-radius: 20px;
+}
+
+.cards .card1 h3 {
+    text-align: center;
+    color: #420e0e;
+    font-size: 20px;
+    padding-bottom: 10px;
+
+}
+
+.cards .card1 p {
+    font-size: 17px;
+    text-align: center;
+
+}
+
+.break {
+    flex-basis: 100%;
+}
+
+.cards-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+    padding-top: 60px;
+}
+
+.cards-2 .card2 {
+    width: 300px;
+    height: 175px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #F8F6F2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.cards-2 .card2:hover {
+    transform: translateY(-5px);
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.two-3 img {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #F8F6F2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    text-align: right;
+}
+
+.two-3 .txt h2 {
+    color: #5C4033;
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.card p {
+    margin: 15px;
+}
+
+.hero1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+}
+
+.hero2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.hero2 h2 {
+    text-align: center;
+    color: #5C4033;
+    padding: 40px;
+    font-size: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.button1 button {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background: transparent;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button1 button:hover {
+    background-color: #eaddd3;
+    color: #000;
+    box-shadow: 0 0 15px #434e76;
+    transform: translateY(-3px);
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .two-one img {
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Header & Navigation */
+    .container .nave-bar {
+        flex-direction: column-reverse;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nave-bar .links nav ul {
+        gap: 10px;
+    }
+
+    /* Hero Section */
+    .one {
+        height: auto;
+        padding: 60px 10px;
+    }
+
+    .one h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Content Sections */
+    .two-one {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .two-one img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .two-one .content {
+        padding-top: 20px;
+    }
+
+    /* Cards Layouts */
+    .cards .card1,
+    .cards .card2,
+    .card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .break {
+        display: none;
+        /* إلغاء الفواصل لإتاحة الترتيب التلقائي */
+    }
+
+    /* Features & Cons Sections */
+    .hero,
+    .hero1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .two-3 img {
+        margin: 20px 0;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Buttons Section */
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button1 {
+        width: 80%;
+    }
+
+    .button1 button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header a {
+        font-size: 13px;
+    }
+
+    .two-2 h2,
+    .two-3 .txt h2,
+    .hero2 h2 {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .card p,
+    .cards .card1 p {
+        font-size: 15px;
+    }
+}
